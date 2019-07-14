@@ -1,5 +1,5 @@
 # ProXML
-C++ implementation of ProXML (Babbar et al., 2019) for Extreme Multi-label Classification
+C++ implementation of ProXML (Babbar et al., 2019) for Extreme Multi-label Classification.
 
 ## References
 
