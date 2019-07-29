@@ -370,6 +370,7 @@ public class DistributedPredictor {
 		// TODO Auto-generated method stub
 
 		DistributedPredictor dp = new DistributedPredictor();
+		MultiLabelMetrics mlm = new MultiLabelMetrics();
 
 		int testSamples = 3803; //number of test samples
 
@@ -380,7 +381,7 @@ public class DistributedPredictor {
 		String outputFile5 =     args[3]; // final output file for top5 prediction
 
 		String inv_propFile    =   args[4]; // input file containing inverse propensity values
-		Map invProp = dp.getInvProp(inv_propFile);
+		Map invProp = mlm.giveInverseProp(inv_propFile);
 
 		String outputFileProp1 =   args[5]; // final output file for top1 weighted prediction
 		String outputFileProp3 =   args[6]; // final output file for top3 weighted prediction
