@@ -72,8 +72,11 @@ Now, we need to get final top-1, top-3 and top-5 from the output of individual m
 ****** IMPORTANT : Change the number of test points in DistributedPredictor.java (at line number 138) based on number of test points in the datasets ******
 
 mkdir ../eurlex/final-output
+javac PropensityComputer.java
+java PropensityComputer ../eurlex/train-remapped-tfidf-relabeled.txt ../eurlex/inv_prop.txt
+
 javac DistributedPredictor.java
-java DistributedPredictor ../eurlex/output/ ../eurlex/final-output/top1.out ../eurlex/final-output/top3.out ../eurlex/final-output/top5.out ../eurlex/final-output/top1-prop.out ../eurlex/final-output/top3-prop.out ../eurlex/final-output/top5-prop.out
+java DistributedPredictor ../eurlex/output/ ../eurlex/final-output/top1.out ../eurlex/final-output/top3.out ../eurlex/final-output/top5.out ../eurlex/inv_prop.txt ../eurlex/final-output/top1-prop.out ../eurlex/final-output/top3-prop.out ../eurlex/final-output/top5-prop.out
 
 javac MultiLabelMetrics.java
 java MultiLabelMetrics ../eurlex/GS.txt ../eurlex/final-output/top1.out ../eurlex/final-output/top3.out ../eurlex/final-output/top5.out ../eurlex/inv_prop.txt ../eurlex/final-output/top1-prop.out ../eurlex/final-output/top3-prop.out ../eurlex/final-output/top5-prop.out
