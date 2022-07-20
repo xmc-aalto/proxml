@@ -60,8 +60,8 @@ public class PropensityComputer {
 		PropensityComputer pc = new PropensityComputer();
 		
 		double A = 0.55 ; double B = 1.5; 
-		String inputFile = "../eurlex/train-remapped-tfidf-relabeled.txt";
-		String propFile =  "../eurlex/inv_prop.txt";
+		String inputFile = args[0];
+		String propFile =  args[1];
 		
 		long totalInstances = 15511; //eurlex
 		
